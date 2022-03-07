@@ -1,0 +1,47 @@
+## This file is a general .ucf for the Nexys4 rev B board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+ 
+
+
+
+
+
+# ==== Cloclk inputs (CLK) ====
+
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = sys_clk;
+TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%;
+
+NET "rst"	LOC = "C12"	| IOSTANDARD = "LVCMOS33";
+
+
+# ==== UART0 Bluetooth ====
+NET "UartRx"	LOC = "E18"	| IOSTANDARD = "LVCMOS33";
+NET "UartTx"	LOC = "D18"	| IOSTANDARD = "LVCMOS33";
+
+
+# ==== UART1 LCD ==== 
+NET "Uart1Rx"	LOC = "B13"	| IOSTANDARD = "LVCMOS33";	#JB1
+NET "Uart1Tx"	LOC = "F14"	| IOSTANDARD = "LVCMOS33";	#JB2
+
+# ==== UART2 RFID ====
+NET "Uart2Rx"	LOC = "V15"	| IOSTANDARD = "LVCMOS33";
+NET "Uart2Tx"	LOC = "V11"	| IOSTANDARD = "LVCMOS33";
+
+	
+
+
+
+
+# ==== GPIO ===
+NET "leds<0>"	LOC = "T8"	| IOSTANDARD = "LVCMOS33";
+NET "leds<1>"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";
+NET "leds<2>"	LOC = "R8"	| IOSTANDARD = "LVCMOS33";
+NET "leds<3>"	LOC = "T6"	| IOSTANDARD = "LVCMOS33";
+NET "leds<4>"	LOC = "U9"	| IOSTANDARD = "LVCMOS33";
+NET "leds<5>"	LOC = "U8"	| IOSTANDARD = "LVCMOS33";
+NET "leds<6>"	LOC = "R7"	| IOSTANDARD = "LVCMOS33";
+NET "leds<7>"	LOC = "R6"	| IOSTANDARD = "LVCMOS33";	
